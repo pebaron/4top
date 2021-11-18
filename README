@@ -1,0 +1,3 @@
+cd bin
+./Run_x /mnt/nfs19/pebaron/madgraph_samples/4top/rootfiles/y0tt_hadr/tag_1_delphes_events out 10 Delphes out 10 Delphes
+
