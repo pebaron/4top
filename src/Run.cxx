@@ -6,10 +6,13 @@
 #include "TString.h"
 #include "TLorentzVector.h"
 #include "TROOT.h"
+#include "TSystem.h"
 #include "math.h"
 #include <iostream>  
 #include "TApplication.h"
+#include "TApplication.h"
 #include <stdlib.h>
+
 using namespace std;
 
 int main (int argc, char *argv[]) { 
@@ -40,6 +43,10 @@ int main (int argc, char *argv[]) {
         cout << "MyNEvents: " << MyNEvents << endl;
         cout << "MyTree: " << MyTree.Data() << endl;
     }
+     gSystem->Load("/home/petr/4top/4top/bin/lib    Delphes.o");
+     gSystem->Load("/home/petr/4top/4top/tmp/lib/ExRootTreeReader.o");
+
+
     Delphes * t = new Delphes(0, MyInput, MyTree, "");
     t->Loop(MyOutput, MyTree, MyNEvents);
     //theApp.Run();
